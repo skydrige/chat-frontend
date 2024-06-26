@@ -34,8 +34,16 @@ function App() {
 
                     {/* Main Content */}
                     <Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-                        <h2>Main Content</h2>
-                        <p>This is the main content area.</p>
+                        <Row className={"chat-section p-2 m-2"}>
+                            <Col>
+                                <center>Chat Area</center>
+                            </Col>
+                        </Row>
+                        <Row className={"chat-input-section p-2 -m-2"}>
+                            <Col>
+                                <center>Chat Input</center>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>

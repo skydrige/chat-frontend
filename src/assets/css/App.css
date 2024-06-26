@@ -39,5 +39,13 @@
 
 .main-content {
 	transition: margin-left 0.3s;
-	flex: 1;
+	flex: 1; /* make main content grow to take up remaining space */
+}
+
+.chat-section {
+	height: 80%;
+}
+
+.chat-input-section {
+	height: 20%;
 }
