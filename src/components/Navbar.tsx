@@ -8,10 +8,17 @@ interface NavbarProps {
 }
 
 const NavbarComponent: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
+	const [isRotated, setIsRotated] = React.useState(true);
+
+	const handleClick = () => {
+		onToggleSidebar();
+		setIsRotated(!isRotated);
+	};
+
 	return (
 		<Navbar className={"navbar"} expand="lg">
-			<Button onClick={onToggleSidebar} className="ms-3" style={{ background: "inherit", border: "none" }}>
-				<img src={sidebarIcon} alt="Toggle Sidebar" className="toggle-icon" />
+			<Button onClick={handleClick} className="ms-3" style={{ background: "inherit", border: "none" }}>
+				<img src={sidebarIcon} alt="Toggle Sidebar" className={`toggle-icon ${isRotated ? 'rotate' : '' }`} />
 			</Button>
 			<Navbar.Brand href="#" className="navbar-brand ms-3">Chat App</Navbar.Brand>
 		</Navbar>

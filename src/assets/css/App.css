@@ -2,6 +2,10 @@
 /*	scrollbar-width: none; !* Firefox *!*/
 /*}*/
 
+.rotate {
+	transform: rotate(90deg);
+}
+
 .navbar {
 	background-color: #262626;
 	color: #ffffff;
@@ -21,6 +25,11 @@
 .toggle-icon {
 	width: 24px;
 	height: 24px;
+	transform: scaleX(-1);
+}
+
+.toggle-icon.rotate {
+	transform: scaleX(-1) rotate(270deg);
 }
 
 .main-container {
