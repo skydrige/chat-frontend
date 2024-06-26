@@ -5,14 +5,15 @@ import sidebarIcon from '../assets/sidebar.png';
 import '../assets/css/App.css';
 interface NavbarProps {
 	onToggleSidebar: () => void;
+	isRotated?: boolean;
 }
 
-const NavbarComponent: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
-	const [isRotated, setIsRotated] = React.useState(false);
+const NavbarComponent: React.FC<NavbarProps> = ({ onToggleSidebar, isRotated }) => {
+	// const [isRotated, setIsRotated] = React.useState(false);
 
 	const handleClick = () => {
 		onToggleSidebar();
-		setIsRotated(!isRotated);
+		// setIsRotated(!isRotated);
 	};
 
 	return (
