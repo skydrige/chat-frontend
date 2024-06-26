@@ -1,3 +1,7 @@
+* {
+	scrollbar-width: none; /* Firefox */
+}
+
 .navbar {
 	background-color: #262626;
 	color: #ffffff;
@@ -48,6 +52,7 @@ body {
 
 .sidebar-column {
 	border: none;
+	border-right: 1px solid #ffffff;
 	background-color: #262626;
 	transition: width 0.3s;
 	overflow-y: scroll; /* enable vertical scrolling on sidebar column */
@@ -59,6 +64,12 @@ body {
 	height: 100%;
 	width: fit-content;
 }
+
+/*.sidebar-header {*/
+/*	background-color: #262626;*/
+/*	color: #ffffff;*/
+/*	justify-content: center;*/
+/*}*/
 
 .main-content {
 	transition: margin-left 0.3s;
@@ -73,23 +84,21 @@ body {
 	height: 20%;
 }
 
-/* This will affect all scrollbars */
 
 /* Width */
 ::-webkit-scrollbar {
-	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: #f1f1f1;
-	border-radius: 10px;
+	width: 1px;
+	background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #268bd2; /* Solarized blue */
-	border-radius: 10px;
+	background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
 }
 
 /* Handle on hover */
