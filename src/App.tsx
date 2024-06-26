@@ -1,11 +1,22 @@
-import {useEffect, useState} from 'react';
-import { Container, Navbar, Button, Row, Col } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './components/Navbar';
+// @ts-ignore
+import Sidebar from './components/Sidebar';
+// @ts-ignore
+import ChatArea from './components/ChatArea';
+// @ts-ignore
+import ChatInput from './components/ChatInput';
 import './assets/css/App.css';
-import sidebarIcon from './assets/sidebar.png';
 
 function App() {
     const [sidebarVisible, setSidebarVisible] = useState(false);
+
+    const handleToggleSidebar = () => {
+        setSidebarVisible(!sidebarVisible);
+    };
+
     useEffect(() => {
         const sidebar = document.querySelector('.sidebar-column');
         const mainContent = document.querySelector('.main-content');
@@ -33,58 +44,17 @@ function App() {
 
     return (
         <div>
-            {/* Navbar */}
-            <Navbar className={"navbar"} expand="lg">
-                <Button onClick={() => setSidebarVisible(!sidebarVisible)} className="ms-3" style={{ background: "inherit", border: "none" }}>
-                    <img src={sidebarIcon} alt="Toggle Sidebar" className="toggle-icon" />
-                </Button>
-                <Navbar.Brand href="#" className="navbar-brand ms-3">Chat App</Navbar.Brand>
-            </Navbar>
+            <NavbarComponent onToggleSidebar={handleToggleSidebar} />
 
-            {/* Main Container */}
             <Container fluid className="main-container">
                 <Row className="main-row">
-                    {/* Sidebar */}
-                    <Col xs={2} className={`sidebar-column ${sidebarVisible ? 'show' : 'hide'} p-4`}>
-                        <div className="sidebar">
-                            <h5>Sidebar</h5>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                            <p>Sidebar content goes here.</p>
-                        </div>
+                    <Col xs={2} className={`sidebar-column p-4 ${sidebarVisible ? 'show' : 'hide'}`}>
+                        <Sidebar/>
                     </Col>
 
-                    {/* Main Content */}
                     <Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-                        <Row className={"chat-section p-2 m-2"}>
-                            <Col>
-                                <center>Chat Area</center>
-                            </Col>
-                        </Row>
-                        <Row className={"chat-input-section p-2 -m-2"}>
-                            <Col>
-                                <center>Chat Input</center>
-                            </Col>
-                        </Row>
+                        <ChatArea />
+                        <ChatInput />
                     </Col>
                 </Row>
             </Container>
