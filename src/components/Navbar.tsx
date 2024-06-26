@@ -8,7 +8,7 @@ interface NavbarProps {
 }
 
 const NavbarComponent: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
-	const [isRotated, setIsRotated] = React.useState(true);
+	const [isRotated, setIsRotated] = React.useState(false);
 
 	const handleClick = () => {
 		onToggleSidebar();

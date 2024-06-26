@@ -8,7 +8,7 @@ import ChatInput from './ChatInput';
 import '../assets/css/App.css';
 
 function Home() {
-	const [sidebarVisible, setSidebarVisible] = useState(false);
+	const [sidebarVisible, setSidebarVisible] = useState(true);
 
 	const handleToggleSidebar = () => {
 		setSidebarVisible(!sidebarVisible);
