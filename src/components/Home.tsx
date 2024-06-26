@@ -8,7 +8,7 @@ import ChatInput from './ChatInput';
 import '../assets/css/App.css';
 
 function Home() {
-	const [sidebarVisible, setSidebarVisible] = useState(true);
+	const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
 
 	const handleToggleSidebar = () => {
 		setSidebarVisible(!sidebarVisible);
@@ -22,11 +22,14 @@ function Home() {
 			const sidebarWidth = sidebar.getBoundingClientRect().width;
 			const mainContentWidth = mainContent.getBoundingClientRect().width;
 
-			if (mainContentWidth < 2 * sidebarWidth) {
+			if (mainContentWidth < 360) {
+				console.log('Mobile View');
 				sidebar.style.position = 'fixed';
 				sidebar.style.zIndex = '1';
 				mainContent.style.marginLeft = `${sidebarWidth}px`;
-			} else {
+			}
+			else {
+				console.log('Desktop View');
 				sidebar.style.position = 'relative';
 				sidebar.style.zIndex = '0';
 				mainContent.style.marginLeft = '0';
