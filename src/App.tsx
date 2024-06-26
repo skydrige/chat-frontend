@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { Container, Navbar, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
@@ -6,6 +6,24 @@ import reactsvg from './assets/react.svg';
 
 function App() {
     const [sidebarVisible, setSidebarVisible] = useState(false);
+    useEffect(() => {
+        const sidebar = document.querySelector('.sidebar-column');
+        const mainContent = document.querySelector('.main-content');
+        if (sidebar && mainContent) {
+            const sidebarWidth = sidebar.getBoundingClientRect().width;
+            const mainContentWidth = mainContent.getBoundingClientRect().width;
+
+            if (mainContentWidth < 2 * sidebarWidth) {
+                sidebar.style.position = 'fixed';
+                sidebar.style.zIndex = '1';
+                mainContent.style.marginLeft = `${sidebarWidth}px`;
+            } else {
+                sidebar.style.position = 'relative';
+                sidebar.style.zIndex = '0';
+                mainContent.style.marginLeft = '0';
+            }
+        }
+    }, [sidebarVisible]);
 
     return (
         <div>

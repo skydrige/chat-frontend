@@ -5,6 +5,10 @@
 	border-bottom: 0.1px solid #ffffff;
 }
 
+.navbar-brand {
+	color: #ffffff !important;
+}
+
 .toggle-button {
 	width: 24px;
 	height: 24px;
