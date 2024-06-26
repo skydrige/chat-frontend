@@ -58,7 +58,7 @@ body {
 	border: none;
 	/*border-right: 1px solid #ffffff;*/
 	background-color: #2c2c2c;
-	transition: width 0.3s;
+	transition: width 0.3s ease-in-out 0s;
 	overflow-y: scroll; /* enable vertical scrolling on sidebar column */
 	height: calc(100vh - 56px); /* set height to 100% of viewport height */
 	width: fit-content;
@@ -80,8 +80,24 @@ body {
 
 .chat-input-section {
 	height: 20%;
+	position: relative;
+	display: flex; /* new */
+	justify-content: center; /* new */
+	align-items: center; /* new */
 }
 
+.chat-input {
+	position: relative; /* new */
+	min-width: 55%;
+	width: calc(100% - 55%); /* 100% - 5% left - 5% right */
+}
+
+@media screen and (max-width: 768px) {
+	.chat-input {
+		width: 100%; /* 0% left and 0% right */
+		bottom: 40%;
+	}
+}
 
 /* Width */
 ::-webkit-scrollbar {
