@@ -2,11 +2,8 @@ import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/Navbar';
-// @ts-ignore
 import Sidebar from './components/Sidebar';
-// @ts-ignore
 import ChatArea from './components/ChatArea';
-// @ts-ignore
 import ChatInput from './components/ChatInput';
 import './assets/css/App.css';
 
@@ -18,25 +15,20 @@ function App() {
     };
 
     useEffect(() => {
-        const sidebar = document.querySelector('.sidebar-column');
-        const mainContent = document.querySelector('.main-content');
+        const sidebar = document.querySelector('.sidebar-column') as HTMLElement;
+        const mainContent = document.querySelector('.main-content') as HTMLElement;
+
         if (sidebar && mainContent) {
             const sidebarWidth = sidebar.getBoundingClientRect().width;
             const mainContentWidth = mainContent.getBoundingClientRect().width;
 
             if (mainContentWidth < 2 * sidebarWidth) {
-                // @ts-ignore
                 sidebar.style.position = 'fixed';
-                // @ts-ignore
                 sidebar.style.zIndex = '1';
-                // @ts-ignore
                 mainContent.style.marginLeft = `${sidebarWidth}px`;
             } else {
-                // @ts-ignore
                 sidebar.style.position = 'relative';
-                // @ts-ignore
                 sidebar.style.zIndex = '0';
-                // @ts-ignore
                 mainContent.style.marginLeft = '0';
             }
         }
