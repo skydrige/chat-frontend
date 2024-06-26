@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Container, Navbar, Button, Row, Col, Collapse } from 'react-bootstrap';
+import { Container, Navbar, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/App.css';
 import reactsvg from './assets/react.svg';
 
 function App() {
@@ -11,30 +12,28 @@ function App() {
             {/* Navbar */}
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Button variant="primary" onClick={() => setSidebarVisible(!sidebarVisible)} className="ms-3">
-                    <img src={reactsvg} alt="Toggle Sidebar" style={{ width: '24px', height: '24px' }} />
+                    <img src={reactsvg} alt="Toggle Sidebar" className="toggle-icon" />
                 </Button>
                 <Navbar.Brand href="#" className="ms-3">Chat App</Navbar.Brand>
             </Navbar>
 
             {/* Main Container */}
-            <Container fluid style={{ height: 'calc(100vh - 56px)' }}> {/* Subtracting Navbar height */}
-                <Row style={{ height: '100%', display: 'flex'}}>
+            <Container fluid className="main-container">
+                <Row className="main-row">
                     {/* Sidebar */}
-                    <Collapse in={sidebarVisible} dimension={"width"}>
-                        <Col xs={2} className="sidebar-column p-2" style={{width: 'fit-content', minWidth: 'fit-content', border: 'none'}}>
-                            <div className="sidebar" style={{ height: '100%', overflowY: 'auto', width: 'fit-content'}}>
-                                <h5>Sidebar</h5>
-                                <p>Sidebar content goes here.</p>
-                                <p>Sidebar content goes here.</p>
-                                <p>Sidebar content goes here.</p>
-                                <p>Sidebar content goes here.</p>
-                                <p>Sidebar content goes here.</p>
-                            </div>
-                        </Col>
-                    </Collapse>
+                    <Col xs={2} className={`sidebar-column ${sidebarVisible ? 'show' : 'hide'} p-2 m-2`}>
+                        <div className="sidebar">
+                            <h5>Sidebar</h5>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                        </div>
+                    </Col>
 
                     {/* Main Content */}
-                    <Col xs={sidebarVisible ? 10 : 12} className="main-content" style={{ transition: 'margin-left 0.3s', flex: '1'}}>
+                    <Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
                         <h2>Main Content</h2>
                         <p>This is the main content area.</p>
                     </Col>

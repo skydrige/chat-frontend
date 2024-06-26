@@ -1,0 +1,43 @@
+.toggle-button {
+	width: 24px;
+	height: 24px;
+}
+
+.toggle-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.main-container {
+	height: calc(100vh - 56px);
+}
+
+.main-row {
+	height: 100%;
+	display: flex;
+}
+
+.sidebar-column {
+	border: none;
+	transition: width 0.3s;
+}
+
+.sidebar-column.show {
+	display: inline-block;
+	min-width: fit-content;
+}
+
+.sidebar-column.hide {
+	display: none;
+}
+
+.sidebar {
+	height: 100%;
+	overflow-y: auto;
+	width: fit-content;
+}
+
+.main-content {
+	transition: margin-left 0.3s;
+	flex: 1;
+}
