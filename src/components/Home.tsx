@@ -23,6 +23,7 @@ function Home() {
 			const mainContentWidth = mainContent.getBoundingClientRect().width;
 
 			if (mainContentWidth < 2 * sidebarWidth) {
+				setSidebarVisible(!sidebarVisible);
 				sidebar.style.position = 'fixed';
 				sidebar.style.zIndex = '1';
 				mainContent.style.marginLeft = `${sidebarWidth}px`;
