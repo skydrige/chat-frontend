@@ -14,12 +14,18 @@ function App() {
             const mainContentWidth = mainContent.getBoundingClientRect().width;
 
             if (mainContentWidth < 2 * sidebarWidth) {
+                // @ts-ignore
                 sidebar.style.position = 'fixed';
+                // @ts-ignore
                 sidebar.style.zIndex = '1';
+                // @ts-ignore
                 mainContent.style.marginLeft = `${sidebarWidth}px`;
             } else {
+                // @ts-ignore
                 sidebar.style.position = 'relative';
+                // @ts-ignore
                 sidebar.style.zIndex = '0';
+                // @ts-ignore
                 mainContent.style.marginLeft = '0';
             }
         }
