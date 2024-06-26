@@ -10,20 +10,37 @@ function App() {
     return (
         <div>
             {/* Navbar */}
-            <Navbar bg="dark" variant="dark" expand="lg">
-                <Button variant="primary" onClick={() => setSidebarVisible(!sidebarVisible)} className="ms-3">
+            <Navbar className={"navbar"} expand="lg">
+                <Button onClick={() => setSidebarVisible(!sidebarVisible)} className="ms-3">
                     <img src={reactsvg} alt="Toggle Sidebar" className="toggle-icon" />
                 </Button>
-                <Navbar.Brand href="#" className="ms-3">Chat App</Navbar.Brand>
+                <Navbar.Brand href="#" className="navbar-brand ms-3">Chat App</Navbar.Brand>
             </Navbar>
 
             {/* Main Container */}
             <Container fluid className="main-container">
                 <Row className="main-row">
                     {/* Sidebar */}
-                    <Col xs={2} className={`sidebar-column ${sidebarVisible ? 'show' : 'hide'} p-2 m-2`}>
+                    <Col xs={2} className={`sidebar-column ${sidebarVisible ? 'show' : 'hide'} p-4`}>
                         <div className="sidebar">
                             <h5>Sidebar</h5>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
+                            <p>Sidebar content goes here.</p>
                             <p>Sidebar content goes here.</p>
                             <p>Sidebar content goes here.</p>
                             <p>Sidebar content goes here.</p>
