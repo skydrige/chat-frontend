@@ -1,17 +1,15 @@
 import React from 'react';
 import { BsSend } from "react-icons/bs";
-import {Button, Form, InputGroup} from "react-bootstrap";
+import { Button, Form, InputGroup } from "react-bootstrap";
 
 const ChatInput: React.FC = () => {
-
 	return (
 		<div className="chat-input-section p-2 m-2">
-			<InputGroup className={"chat-input"} id={"chat-input-field"}>
+			<InputGroup className={"chat-input-field"}>
 				<Form.Control
-					type={"text"}
+					as="textarea"
 					placeholder="Type a message..."
-					aria-label="Recipient's username"
-					aria-describedby="basic-addon2"
+					aria-label="Type a message"
 					className={"chat-input"}
 				/>
 				<InputGroup.Text className={"chat-input-group"}>
