@@ -8,8 +8,8 @@ const ChatInput: React.FC = () => {
 			<InputGroup className={"chat-input-field"}>
 				<Form.Control
 					as="textarea"
-					placeholder="Type a message..."
-					aria-label="Type a message"
+					placeholder="Type to Chat..."
+					aria-label="message"
 					className={"chat-input"}
 				/>
 				<InputGroup.Text className={"chat-input-group"}>
