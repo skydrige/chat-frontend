@@ -113,6 +113,7 @@ body {
 	max-height: 100px;
 	bottom: 0;
 	height: 40px;
+	min-height: 40px;
 	padding: 12px 20px;
 	box-sizing: border-box;
 	border: none;
@@ -172,6 +173,7 @@ body {
 
 @media screen and (width < 768px) {
 	.chat-input-field {
+		position: relative;!important;
 		width: 100%;
 		bottom: 40%;
 	}
