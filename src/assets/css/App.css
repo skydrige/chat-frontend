@@ -122,6 +122,7 @@ body {
 	resize: none;
 	overflow-y: auto;
 	font-family: Consolas, sans-serif;
+	color: #d6d6d6;
 }
 
 .chat-input textarea:active, .chat-input textarea:focus {
@@ -150,24 +151,24 @@ body {
 	border: none;
 	position: relative;
 	/* Adjust padding as needed */
-	padding-right: 8%;
+	padding-right: 60px;
 	justify-items: center;
 	align-items: center;
 }
 
 .chat-button Button {
-	background-color: #2c2c2c;
+	background: none;
 	color: #ffffff;
 	border: none;
 }
 
 .chat-button Button:hover {
-	background-color: #424242;
+	background: none;
 	color: #ffffff;
 }
 
 .chat-button Button:active:focus {
-	background-color: #2c2c2c;
+	background: none;
 	color: #ffffff;
 }
 
@@ -178,7 +179,7 @@ body {
 		bottom: 40%;
 	}
 	.chat-button {
-		padding-right: 50px;!important;
+		padding-right: 63px;!important;
 	}
 }
 

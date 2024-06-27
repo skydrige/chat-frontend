@@ -12,7 +12,7 @@ const ChatInput: React.FC = () => {
 					<textarea placeholder="Type to Chat..." />
 				</Col>
 				<Col xs={1} className="chat-button">
-					<Button size="sm">
+					<Button size="lg">
 						<BsSend />
 					</Button>
 				</Col>
