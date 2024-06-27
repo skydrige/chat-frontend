@@ -1,23 +1,22 @@
+// ChatInput.tsx
 import React from 'react';
-import { BsSend } from "react-icons/bs";
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { BsSend } from 'react-icons/bs';
+import { Button, Col, Row } from 'react-bootstrap';
+import '../assets/css/App.css'; // Import your CSS file
 
 const ChatInput: React.FC = () => {
 	return (
-		<div className="chat-input-section p-2 m-2">
-			<InputGroup className={"chat-input-field"}>
-				<Form.Control
-					as="textarea"
-					placeholder="Type to Chat..."
-					aria-label="message"
-					className={"chat-input"}
-				/>
-				<InputGroup.Text className={"chat-input-group"}>
-					<Button className={"chat-button"}>
+		<div className="chat-input-section">
+			<Row className="chat-input-field">
+				<Col xs={8} className="chat-input">
+					<textarea placeholder="Type to Chat..." />
+				</Col>
+				<Col xs={1} className="chat-button">
+					<Button size="sm">
 						<BsSend />
 					</Button>
-				</InputGroup.Text>
-			</InputGroup>
+				</Col>
+			</Row>
 		</div>
 	);
 };
