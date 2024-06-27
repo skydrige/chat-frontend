@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import React from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import sidebarIcon from '../assets/sidebar.png';
@@ -9,11 +8,9 @@ interface NavbarProps {
 }
 
 const NavbarComponent: React.FC<NavbarProps> = ({ onToggleSidebar, isRotated }) => {
-	// const [isRotated, setIsRotated] = React.useState(false);
 
 	const handleClick = () => {
 		onToggleSidebar();
-		// setIsRotated(!isRotated);
 	};
 
 	return (
