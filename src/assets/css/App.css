@@ -122,6 +122,7 @@ body {
 	resize: none;
 	overflow-y: auto;
 	font-family: Consolas, sans-serif;
+	color: #d6d6d6;
 }
 
 .chat-input textarea:active, .chat-input textarea:focus {
