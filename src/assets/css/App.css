@@ -7,7 +7,7 @@
 }
 
 .navbar {
-	background-color: #1b1a1a;
+	background-color: #121212;
 	color: #ffffff;
 	border-bottom: 0.0005em solid rgba(255, 255, 255, 0.07);
 }
@@ -96,7 +96,7 @@ body {
 .main-content footer {
 	position: relative;
 	height: 4%;
-	color: #ffffff;
+	color: #acacac;
 	bottom: 1%;
 	text-align: center;
 }
