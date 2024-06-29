@@ -227,6 +227,9 @@ body {
 	.chat-button {
 		padding-right: 63px;!important;
 	}
+	.chat-input-field textarea {
+		width: calc(100% - 31%);
+	}
 }
 
 /* Width */

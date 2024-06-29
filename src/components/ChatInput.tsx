@@ -16,9 +16,9 @@ const ChatInput: React.FC = () => {
 
 	const adjustTextAreaHeight = () => {
 		if (textAreaRef.current && chatInputRef.current) {
-			textAreaRef.current.style.height = '40px'; // Reset height to auto
-			textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`; // Set to scrollHeight
-			chatInputRef.current.style.height = `${textAreaRef.current.scrollHeight}px`; // Adjust parent height accordingly
+			textAreaRef.current.style.height = '40px';
+			textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+			chatInputRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
 			if (textAreaRef.current.scrollHeight > 100) {
 				textAreaRef.current.style.overflowY = 'scroll';
 			}
@@ -38,7 +38,7 @@ const ChatInput: React.FC = () => {
 		const handleBlur = () => {
 			setTimeout(() => {
 				footer?.classList.remove('hide-footer');
-			}, 250); // Delay of 500 milliseconds, which is half a second
+			}, 250);
 		};
 
 		textArea?.addEventListener('focus', handleFocus);
@@ -51,7 +51,7 @@ const ChatInput: React.FC = () => {
 	}, []);
 
 	useEffect(() => {
-		adjustTextAreaHeight(); // Adjust height initially
+		adjustTextAreaHeight();
 	}, [text]);
 
 	return (
