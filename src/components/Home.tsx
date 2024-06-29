@@ -49,13 +49,13 @@ function Home() {
 			const mainContentWidth = mainContent.getBoundingClientRect().width;
 
 			if (mainContentWidth < 360) {
-				console.log('Mobile View');
+				// console.log('Mobile View');
 				sidebar.style.position = 'fixed';
 				sidebar.style.zIndex = '1';
 				mainContent.style.marginLeft = `${sidebarWidth}px`;
 			}
 			else {
-				console.log('Desktop View');
+				// console.log('Desktop View');
 				sidebar.style.position = 'relative';
 				sidebar.style.zIndex = '0';
 				mainContent.style.marginLeft = '0';
