@@ -19,6 +19,9 @@ const ChatInput: React.FC = () => {
 			textAreaRef.current.style.height = '40px'; // Reset height to auto
 			textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`; // Set to scrollHeight
 			chatInputRef.current.style.height = `${textAreaRef.current.scrollHeight}px`; // Adjust parent height accordingly
+			if (textAreaRef.current.scrollHeight > 100) {
+				textAreaRef.current.style.overflowY = 'scroll';
+			}
 		}
 	};
 
