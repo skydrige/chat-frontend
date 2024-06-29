@@ -210,10 +210,19 @@ body {
 }
 
 @media screen and (width < 768px) {
+	.chat-section {
+		height: 75%;
+	}
+	.chat-input-section {
+		height: 15%;
+	}
 	.chat-input-field {
 		position: absolute;!important;
 		width: 100%;
-		bottom: 20%;
+		bottom: 30%;
+	}
+	.main-content footer{
+		bottom: 3%;
 	}
 	.chat-button {
 		padding-right: 63px;!important;
