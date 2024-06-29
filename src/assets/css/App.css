@@ -83,7 +83,7 @@ body {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	padding: 10px;
 	margin: 10px;
 }
@@ -140,13 +140,14 @@ body {
 	color: rgba(255, 255, 255, 0.59);
 	min-height: 40px;
 	padding: 0;
+	max-height: 150px;
 }
 
 .chat-input textarea {
 	position: absolute;
 	background-color: transparent;
 	width: calc(100% - 20%);
-	max-height: 100px;
+	max-height: 140px;
 	bottom: 0;
 	height: 40px;
 	min-height: 40px;
