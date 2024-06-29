@@ -26,6 +26,29 @@ const ChatInput: React.FC = () => {
 	};
 
 	useEffect(() => {
+		const textArea = textAreaRef.current;
+		const footer = document.querySelector('.main-content footer');
+
+		const handleFocus = () => {
+			if (window.innerWidth < 768) {
+				footer?.classList.add('hide-footer');
+			}
+		};
+
+		const handleBlur = () => {
+			footer?.classList.remove('hide-footer');
+		};
+
+		textArea?.addEventListener('focus', handleFocus);
+		textArea?.addEventListener('blur', handleBlur);
+
+		return () => {
+			textArea?.removeEventListener('focus', handleFocus);
+			textArea?.removeEventListener('blur', handleBlur);
+		};
+	}, []);
+
+	useEffect(() => {
 		adjustTextAreaHeight(); // Adjust height initially
 	}, [text]);
 
