@@ -100,7 +100,7 @@ body {
 	display: flex;
 	position: absolute;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-between; /* This will push the items to the ends of the container */
 	background-color: #2c2c2c;
 	min-width: 55%;
 	width: calc(100% - 55%);
@@ -112,10 +112,8 @@ body {
 	margin: 2px;
 	width: 20px;
 	border: none;
-	position: relative;
-	left: 2px;
 	padding: 0 40px 0 1px;
-	bottom: 0;
+	align-self: flex-end; /* Align this item to the end of the column */
 }
 
 .file-link Button {
@@ -186,12 +184,8 @@ body {
 .chat-button {
 	margin: 2px;
 	border: none;
-	position: relative;
-	/* Adjust padding as needed */
 	padding-right: 60px;
-	justify-items: center;
-	align-items: center;
-	bottom: 0;
+	align-self: flex-end; /* Align this item to the end of the column */
 }
 
 .chat-button Button {
