@@ -75,6 +75,7 @@ body {
 
 .chat-section {
 	height: 85%;
+	padding: 2px 2px 0;
 }
 
 .chat-input-section {
@@ -112,15 +113,25 @@ body {
 	width: 20px;
 	border: none;
 	position: relative;
-	padding-right: 40px;
 	left: 2px;
-	padding-left: 1px;
+	padding: 0 40px 0 1px;
+	bottom: 0;
 }
 
 .file-link Button {
 	background: none;
 	color: #ffffff;
 	border: none;
+}
+
+.file-link Button:hover {
+	background: none;
+	color: #ffffff;
+}
+
+.file-link Button:active:focus {
+	background: none;
+	color: #ffffff;
 }
 
 .chat-input {
@@ -132,19 +143,20 @@ body {
 }
 
 .chat-input textarea {
+	position: absolute;
 	background-color: transparent;
-	width: 100%;
+	width: calc(100% - 20%);
 	max-height: 100px;
 	bottom: 0;
 	height: 40px;
 	min-height: 40px;
-	padding: 12px 15px;
+	padding: 5px 15px 5px;
 	box-sizing: border-box;
 	border: none;
 	border-radius: 4px;
 	font-size: 16px;
 	resize: none;
-	overflow-y: auto;
+	overflow-y: hidden;
 	font-family: Consolas, sans-serif;
 	color: #d6d6d6;
 }
@@ -178,6 +190,7 @@ body {
 	padding-right: 60px;
 	justify-items: center;
 	align-items: center;
+	bottom: 0;
 }
 
 .chat-button Button {
