@@ -2,6 +2,10 @@
 	transform: rotate(90deg);
 }
 
+.hide-footer {
+	display: none;!important;
+}
+
 .navbar {
 	background-color: #232323;
 	color: #ffffff;
@@ -218,6 +222,7 @@ body {
 	}
 	.main-content footer{
 		bottom: 3%;
+		text-align: center;
 	}
 	.chat-button {
 		padding-right: 63px;!important;
