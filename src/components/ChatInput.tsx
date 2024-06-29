@@ -59,7 +59,7 @@ const ChatInput: React.FC = () => {
 			<Row className="chat-input-field">
 				<Col xs={1} className="file-link">
 					<Button size="lg">
-						<LuFileSymlink />
+						<LuFileSymlink/>
 					</Button>
 				</Col>
 				<Col xs={8} className="chat-input" ref={chatInputRef}>
