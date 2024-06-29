@@ -74,8 +74,9 @@ function Home() {
 					</Col>
 
 					<Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-						<ChatArea />
-						<ChatInput />
+						<ChatArea/>
+						<ChatInput/>
+						<footer>&copy; Horizon Team</footer>
 					</Col>
 				</Row>
 			</Container>

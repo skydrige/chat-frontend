@@ -74,30 +74,37 @@ body {
 }
 
 .chat-section {
-	height: 80%;
+	height: 85%;
 }
 
 .chat-input-section {
-	height: 20%;
+	height: 10%;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.chat-input-section {
 	padding: 10px;
 	margin: 10px;
 }
 
+.main-content footer {
+	position: relative;
+	height: 4%;
+	color: #ffffff;
+	bottom: 1%;
+	text-align: center;
+}
+
 .chat-input-field {
 	display: flex;
+	position: absolute;
 	align-items: center;
 	justify-content: space-between;
 	background-color: #2c2c2c;
 	min-width: 55%;
 	width: calc(100% - 55%);
 	border-radius: 30px;
+	bottom: 1%;
 }
 
 .chat-input {
