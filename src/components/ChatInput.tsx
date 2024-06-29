@@ -36,7 +36,9 @@ const ChatInput: React.FC = () => {
 		};
 
 		const handleBlur = () => {
-			footer?.classList.remove('hide-footer');
+			setTimeout(() => {
+				footer?.classList.remove('hide-footer');
+			}, 500); // Delay of 500 milliseconds, which is half a second
 		};
 
 		textArea?.addEventListener('focus', handleFocus);
