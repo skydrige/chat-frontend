@@ -158,14 +158,14 @@ body {
 }
 
 .file-link Button:hover {
-	background: none;
+	background: inherit;
 	color: #ffffff;
 	transform: scale(1.09);
 	transition: transform 0.4s;
 }
 
 .file-link Button:active:focus {
-	background: none;
+	background: inherit;
 	color: #ffffff;
 	transform: scale(1.09);
 	transition: transform 0.4s;
@@ -222,26 +222,26 @@ body {
 
 .chat-button {
 	margin: 2px;
-	border: none;
+	border: inherit;
 	padding-right: 60px;
 	align-self: flex-end; /* Align this item to the end of the column */
 }
 
 .chat-button Button {
-	background: none;
+	background: inherit;
 	color: #ffffff;
 	border: none;
 }
 
 .chat-button Button:hover {
-	background: none;
+	background: inherit;
 	color: #ffffff;
 	transform: scale(1.09);
 	transition: transform 0.4s;
 }
 
 .chat-button Button:active:focus {
-	background: none;
+	background: inherit;
 	color: #ffffff;
 }
 
