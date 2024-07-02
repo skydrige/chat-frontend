@@ -80,11 +80,11 @@ body {
 }
 
 .new-chat {
-	background-color: inherit;
+	background-color: #2e2e2e;
 	color: #ffffff;
 	border: none;
 	width: 100%;
-	border-radius: 30px;
+	border-radius: 10px;
 	text-align: center;
 }
 
@@ -98,8 +98,6 @@ body {
 .new-chat:focus:active {
 	background-color: #333232;
 	color: #ffffff;
-	transform: scale(1.05);
-	transition: transform 0.4s;
 }
 
 .main-content {
