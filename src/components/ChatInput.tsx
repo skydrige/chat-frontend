@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BsSend } from 'react-icons/bs';
 import { Button, Col, Row } from 'react-bootstrap';
-import '../assets/css/App.css'; // Import your CSS file
+import '../assets/css/App.css';
 import { LuFileSymlink } from "react-icons/lu";
 
 const ChatInput: React.FC = () => {
