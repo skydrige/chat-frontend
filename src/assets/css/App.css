@@ -258,12 +258,10 @@ body {
 		bottom: 30%;
 	}
 	.main-content footer{
-		background-color: inherit;
 		bottom: 3%;
 		text-align: center;
 	}
 	.chat-button {
-		background-color: inherit;
 		padding-right: 63px;!important;
 	}
 	.chat-input-field textarea {
