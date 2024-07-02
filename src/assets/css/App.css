@@ -228,20 +228,20 @@ body {
 }
 
 .chat-button Button {
-	background: inherit;
+	background: none;
 	color: #ffffff;
 	border: none;
 }
 
 .chat-button Button:hover {
-	background: inherit;
+	background: none;
 	color: #ffffff;
 	transform: scale(1.09);
 	transition: transform 0.4s;
 }
 
 .chat-button Button:active:focus {
-	background: inherit;
+	background: none;
 	color: #ffffff;
 }
 
@@ -266,6 +266,23 @@ body {
 	}
 	.chat-input-field textarea {
 		width: calc(100% - 31%);
+	}
+	.chat-button Button {
+		background: none;
+		color: #ffffff;
+		border: none;
+	}
+
+	.chat-button Button:hover {
+		background: none;
+		color: #ffffff;
+		transform: scale(1.09);
+		transition: transform 0.4s;
+	}
+
+	.chat-button Button:active:focus {
+		background: none;
+		color: #ffffff;
 	}
 }
 
