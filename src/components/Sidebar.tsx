@@ -1,40 +1,14 @@
 // components/Sidebar.tsx
 import React from 'react';
 import '../assets/css/App.css';
+import {Button} from "react-bootstrap";
 
 const Sidebar: React.FC = () => {
 	return (
 		<div className="sidebar">
-			<h5>SideBar</h5>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
-			<p>Sidebar content goes here.</p>
+			<Button className={"new-chat"}>
+				New Chat
+			</Button>
 		</div>
 	);
 }

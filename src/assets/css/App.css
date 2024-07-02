@@ -1,3 +1,8 @@
+/*root*/
+html {
+	font-family: "JetBrains Mono Medium", monospace;!important;
+}
+
 .rotate {
 	transform: rotate(90deg);
 }
@@ -70,6 +75,31 @@ body {
 .sidebar {
 	height: 100%;
 	width: fit-content;
+	min-width: 190px;
+	align-items: center;
+}
+
+.new-chat {
+	background-color: inherit;
+	color: #ffffff;
+	border: none;
+	width: 100%;
+	border-radius: 30px;
+	text-align: center;
+}
+
+.new-chat:hover {
+	background-color: #333232;
+	color: #ffffff;
+	transform: scale(1.05);
+	transition: transform 0.4s;
+}
+
+.new-chat:focus:active {
+	background-color: #333232;
+	color: #ffffff;
+	transform: scale(1.05);
+	transition: transform 0.4s;
 }
 
 .main-content {
@@ -130,11 +160,15 @@ body {
 .file-link Button:hover {
 	background: none;
 	color: #ffffff;
+	transform: scale(1.09);
+	transition: transform 0.4s;
 }
 
 .file-link Button:active:focus {
 	background: none;
 	color: #ffffff;
+	transform: scale(1.09);
+	transition: transform 0.4s;
 }
 
 .chat-input {
@@ -202,6 +236,8 @@ body {
 .chat-button Button:hover {
 	background: none;
 	color: #ffffff;
+	transform: scale(1.09);
+	transition: transform 0.4s;
 }
 
 .chat-button Button:active:focus {
