@@ -262,27 +262,34 @@ body {
 		text-align: center;
 	}
 	.chat-button {
+		background: none;
 		padding-right: 63px;!important;
 	}
 	.chat-input-field textarea {
 		width: calc(100% - 31%);
 	}
 	.chat-button Button {
-		background: none;
+		background: none;!important;
 		color: #ffffff;
 		border: none;
 	}
 
 	.chat-button Button:hover {
-		background: none;
+		background: none;!important;
 		color: #ffffff;
 		transform: scale(1.09);
 		transition: transform 0.4s;
 	}
 
 	.chat-button Button:active:focus {
-		background: none;
+		background: none;!important;
 		color: #ffffff;
+	}
+
+	.chat-button Button:focus:active {
+		background: none;!important;
+		color: #ffffff;
+		border: none;
 	}
 }
 
