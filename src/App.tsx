@@ -6,6 +6,7 @@ import './assets/css/App.css';
 function App() {
 
 	return (
+		<BrowserRouter>
 			<Routes>
 				<Route path="/home" element={
 					<Home />
@@ -14,6 +15,7 @@ function App() {
 					<Navigate to="/home" />
 				} />
 			</Routes>
+		</BrowserRouter>
 	);
 }
 
