@@ -96,7 +96,7 @@ body {
 	box-shadow: none;
 	outline: none;
 	border: none;
-	transform: scale(1.03);
+	transform: scale(1.2);
 	transition: transform 0.3s ease-in-out 0s;
 }
 
@@ -131,7 +131,7 @@ body {
 	box-shadow: none;
 	outline: none;
 	border: none;
-	transform: scale(1.03);
+	transform: scale(1.2);
 	transition: transform 0.3s ease-in-out 0s;
 }
 
