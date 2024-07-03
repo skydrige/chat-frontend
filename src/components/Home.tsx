@@ -5,11 +5,13 @@ import NavbarComponent from './Navbar';
 import Sidebar from './Sidebar';
 import ChatArea from './ChatArea';
 import ChatInput from './ChatInput';
+// import useNavigate from 'react-router-dom';
 import '../assets/css/App.css';
 
 function Home() {
 	const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
 	const [isRotated, setIsRotated] = useState(false);
+	// const navigate = useNavigate();
 
 	const handleToggleSidebar = () => {
 		setSidebarVisible(!sidebarVisible);
