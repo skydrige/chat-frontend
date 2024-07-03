@@ -11,7 +11,9 @@ const Sidebar: React.FC = () => {
 			</div>
 			<div className={"sidebar-content"}>
 				<Button>Home</Button>
-				<Button>Chat</Button>
+				<Button>Profile</Button>
+				<Button>Settings</Button>
+				<Button>Logout</Button>
 			</div>
 		</div>
 	);
