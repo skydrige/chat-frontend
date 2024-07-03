@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BsSend } from 'react-icons/bs';
 import { Button, Col, Row } from 'react-bootstrap';
-import '../assets/css/App.css'; // Import your CSS file
+import '../assets/css/App.css';
 import { LuFileSymlink } from "react-icons/lu";
 
 const ChatInput: React.FC = () => {
@@ -59,7 +59,7 @@ const ChatInput: React.FC = () => {
 			<Row className="chat-input-field">
 				<Col xs={1} className="file-link">
 					<Button size="lg">
-						<LuFileSymlink />
+						<LuFileSymlink/>
 					</Button>
 				</Col>
 				<Col xs={8} className="chat-input" ref={chatInputRef}>
