@@ -7,7 +7,7 @@ const Sidebar: React.FC = () => {
 	return (
 		<div className="sidebar">
 			<div className="sidebar-header">
-				<Button>Chat App</Button>
+				<Button>New Chat</Button>
 			</div>
 			<div className={"sidebar-content"}>
 				<Button>Home</Button>
