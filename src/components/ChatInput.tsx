@@ -63,7 +63,7 @@ const ChatInput: React.FC = () => {
 					</Button>
 				</Col>
 				<Col xs={8} className="chat-input" ref={chatInputRef}>
-                    <textarea ref={textAreaRef} value={text} onChange={handleChange} placeholder="Type to Chat..." maxLength={500}/>
+                    <textarea ref={textAreaRef} value={text} onChange={handleChange} placeholder="Type to Chat..." maxLength={1000000}/>
 				</Col>
 				<Col xs={1} className="chat-button">
 					<Button size="lg">

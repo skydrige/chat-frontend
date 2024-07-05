@@ -153,6 +153,9 @@ body {
 	height: 85%;
 	padding: 2px 2px 0;
 	text-align: center;
+	display: flex;
+	position: relative;
+	justify-content: center;
 }
 
 .chat-input-section {
@@ -237,6 +240,7 @@ body {
 	overflow-y: hidden;
 	font-family: Consolas, sans-serif;
 	color: #d6d6d6;
+	text-align: justify;
 }
 
 .chat-input textarea:active, .chat-input textarea:focus {
@@ -285,6 +289,16 @@ body {
 	color: #ffffff;
 }
 
+.chat-area {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #1c1c1c;
+	min-width: 65%;
+	width: 100%;
+	border-radius: 30px;
+}
+
 @media screen and (width < 768px) {
 	.chat-section {
 		height: 75%;
@@ -306,6 +320,7 @@ body {
 	}
 	.chat-input-field textarea {
 		width: calc(100% - 31%);
+		text-align: left;
 	}
 }
 
