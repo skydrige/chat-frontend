@@ -1,22 +1,25 @@
-import React from 'react';
-import '../assets/css/App.css';
+import React, { useEffect, useRef } from 'react';
 import ChatCard from './ChatCard';
-
-interface Message {
-	sender: 'user' | 'system';
-	text: string;
-}
+import '../assets/css/App.css';
 
 interface ChatAreaProps {
-	messages: Message[];
+	messages: { sender: 'user' | 'system'; text: string }[];
 }
 
 const ChatArea: React.FC<ChatAreaProps> = ({ messages }) => {
+	const chatBoxRef = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		if (chatBoxRef.current) {
+			chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+		}
+	}, [messages]);
+
 	return (
 		<div className="chat-area">
-			<div className="chat-box">
-				{messages.map((msg, index) => (
-					<ChatCard key={index} sender={msg.sender} text={msg.text} />
+			<div className="chat-box" ref={chatBoxRef}>
+				{messages.map((message, index) => (
+					<ChatCard key={index} sender={message.sender} text={message.text} />
 				))}
 			</div>
 		</div>
