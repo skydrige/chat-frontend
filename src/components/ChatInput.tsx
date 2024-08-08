@@ -14,6 +14,21 @@ const ChatInput: React.FC = () => {
 		adjustTextAreaHeight();
 	};
 
+	const handleInput = () => {
+		if (text.trim()) {
+			console.log('Input submitted:', text);
+			setText('');
+			adjustTextAreaHeight();
+		}
+	};
+
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+		if (e.key === 'Enter' && !e.shiftKey) {
+			e.preventDefault();
+			handleInput();
+		}
+	};
+
 	const adjustTextAreaHeight = () => {
 		if (textAreaRef.current && chatInputRef.current) {
 			textAreaRef.current.style.height = '40px';
@@ -63,10 +78,10 @@ const ChatInput: React.FC = () => {
 					</Button>
 				</Col>
 				<Col xs={8} className="chat-input" ref={chatInputRef}>
-                    <textarea ref={textAreaRef} value={text} onChange={handleChange} placeholder="Type to Chat..." maxLength={1000000}/>
+					<textarea ref={textAreaRef} value={text} onChange={handleChange} onKeyDown={handleKeyDown} placeholder="Type to Chat..." maxLength={1000000}/>
 				</Col>
 				<Col xs={1} className="chat-button">
-					<Button size="lg">
+					<Button size="lg" onClick={handleInput}>
 						<BsSend />
 					</Button>
 				</Col>
