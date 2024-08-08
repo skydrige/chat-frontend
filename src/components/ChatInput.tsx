@@ -4,7 +4,11 @@ import { Button, Col, Row } from 'react-bootstrap';
 import '../assets/css/App.css';
 import { LuFileSymlink } from "react-icons/lu";
 
-const ChatInput: React.FC = () => {
+interface ChatInputProps {
+	onSend: (message: string) => void;
+}
+
+const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
 	const [text, setText] = useState('');
 	const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
 	const chatInputRef = useRef<HTMLDivElement | null>(null);
@@ -16,7 +20,7 @@ const ChatInput: React.FC = () => {
 
 	const handleInput = () => {
 		if (text.trim()) {
-			console.log('Input submitted:', text);
+			onSend(text);
 			setText('');
 			adjustTextAreaHeight();
 		}
@@ -74,11 +78,11 @@ const ChatInput: React.FC = () => {
 			<Row className="chat-input-field">
 				<Col xs={1} className="file-link">
 					<Button size="lg">
-						<LuFileSymlink/>
+						<LuFileSymlink />
 					</Button>
 				</Col>
 				<Col xs={8} className="chat-input" ref={chatInputRef}>
-					<textarea ref={textAreaRef} value={text} onChange={handleChange} onKeyDown={handleKeyDown} placeholder="Type to Chat..." maxLength={1000000}/>
+					<textarea ref={textAreaRef} value={text} onChange={handleChange} onKeyDown={handleKeyDown} placeholder="Type to Chat..." maxLength={1000000} />
 				</Col>
 				<Col xs={1} className="chat-button">
 					<Button size="lg" onClick={handleInput}>

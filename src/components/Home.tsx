@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
@@ -7,9 +7,15 @@ import ChatArea from './ChatArea';
 import ChatInput from './ChatInput';
 import '../assets/css/App.css';
 
+interface Message {
+	sender: 'user' | 'system';
+	text: string;
+}
+
 function Home() {
 	const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
 	const [isRotated, setIsRotated] = useState(false);
+	const [messages, setMessages] = useState<Message[]>([]);
 
 	const handleToggleSidebar = () => {
 		setSidebarVisible(!sidebarVisible);
@@ -36,7 +42,6 @@ function Home() {
 		document.addEventListener('mousedown', handleClickOutside);
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
-
 		};
 	}, []);
 
@@ -49,19 +54,20 @@ function Home() {
 			const mainContentWidth = mainContent.getBoundingClientRect().width;
 
 			if (mainContentWidth < 360) {
-				// console.log('Mobile View');
 				sidebar.style.position = 'fixed';
 				sidebar.style.zIndex = '1';
 				mainContent.style.marginLeft = `${sidebarWidth}px`;
-			}
-			else {
-				// console.log('Desktop View');
+			} else {
 				sidebar.style.position = 'relative';
 				sidebar.style.zIndex = '0';
 				mainContent.style.marginLeft = '0';
 			}
 		}
 	}, [sidebarVisible]);
+
+	const handleUserMessage = (text: string) => {
+		setMessages([...messages, { sender: 'user', text }, { sender: 'system', text: 'Error 404: Server Down' }]);
+	};
 
 	return (
 		<div>
@@ -70,12 +76,12 @@ function Home() {
 			<Container fluid className="main-container">
 				<Row className="main-row">
 					<Col xs={2} className={`sidebar-column p-4 ${sidebarVisible ? 'show' : 'hide'}`}>
-						<Sidebar/>
+						<Sidebar />
 					</Col>
 
 					<Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-						<ChatArea/>
-						<ChatInput/>
+						<ChatArea messages={messages} />
+						<ChatInput onSend={handleUserMessage} />
 						<footer>&copy; Horizon 2024</footer>
 					</Col>
 				</Row>
