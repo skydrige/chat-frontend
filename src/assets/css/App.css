@@ -368,6 +368,9 @@ body {
 		width: calc(100% - 31%);
 		text-align: left;
 	}
+	.chat-area {
+		min-height: 80%;
+	}
 }
 
 /* Width */
