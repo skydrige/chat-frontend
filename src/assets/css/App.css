@@ -81,6 +81,7 @@ body {
 	align-self: center;
 	margin: 10px;
 	width: 80%;
+	height: 10%;
 }
 
 .sidebar-header Button {
@@ -111,11 +112,12 @@ body {
 
 .sidebar-content {
 	align-self: center;
-	margin: 10px;
 	width: 80%;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	height: 80%;
+	overflow-y: auto;
 }
 
 .sidebar-content Button {
@@ -132,11 +134,66 @@ body {
 	box-shadow: none;
 	outline: none;
 	border: none;
+	/*transform: scale(1.2);*/
+	/*transition: transform 0.3s ease-in-out 0s;*/
+}
+
+.sidebar-content Button:focus:active {
+	background: #303030;
+	width: 100%;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.sidebar-content::-webkit-scrollbar {
+	width: 0;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+	background: none;
+	border-radius: 0;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+	background: none;
+	border-radius: 0;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+	border-radius: 0;
+	background: none;
+}
+
+.sidebar-footer {
+	align-self: center;
+	margin: 10px;
+	width: 80%;
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.sidebar-footer Button {
+	width: 100%;
+	background: #303030;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.sidebar-footer Button:hover {
+	background: #303030;
+	width: 100%;
+	box-shadow: none;
+	outline: none;
+	border: none;
 	transform: scale(1.2);
 	transition: transform 0.3s ease-in-out 0s;
 }
 
-.sidebar-content Button:focus:active {
+.sidebar-footer Button:focus:active {
 	background: #303030;
 	width: 100%;
 	box-shadow: none;
