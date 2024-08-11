@@ -1,9 +1,25 @@
 // components/Sidebar.tsx
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 import '../assets/css/App.css';
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+	label: string;
+	val ?: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ label, val}) => {
+	const navigate = useNavigate();
+
+	const handleNavigation = () => {
+		if (val) {
+			navigate("/profile");
+		} else {
+			navigate("/home");
+		}
+	};
+
 	return (
 		<div className="sidebar">
 			<div className="sidebar-header">
@@ -24,7 +40,7 @@ const Sidebar: React.FC = () => {
 				<Button>Chat - 12</Button>
 			</div>
 			<div className={"sidebar-footer"}>
-				<Button>Settings</Button>
+				<Button onClick={handleNavigation}>{label}</Button>
 				<Button>Logout</Button>
 			</div>
 		</div>

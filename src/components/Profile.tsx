@@ -3,19 +3,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
 import Sidebar from './Sidebar';
-import ChatArea from './ChatArea';
-import ChatInput from './ChatInput';
 import '../assets/css/App.css';
 
-interface Message {
-	sender: 'user' | 'system';
-	text: string;
-}
-
-function Home() {
+function Profile() {
 	const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
 	const [isRotated, setIsRotated] = useState(false);
-	const [messages, setMessages] = useState<Message[]>([]);
 
 	const handleToggleSidebar = () => {
 		setSidebarVisible(!sidebarVisible);
@@ -65,10 +57,6 @@ function Home() {
 		}
 	}, [sidebarVisible]);
 
-	const handleUserMessage = (text: string) => {
-		setMessages([...messages, { sender: 'user', text }, { sender: 'system', text: 'Error 404: Server Down' }]);
-	};
-
 	return (
 		<div>
 			<NavbarComponent onToggleSidebar={handleToggleSidebar} isRotated={isRotated} />
@@ -76,13 +64,11 @@ function Home() {
 			<Container fluid className="main-container">
 				<Row className="main-row">
 					<Col xs={2} className={`sidebar-column p-4 ${sidebarVisible ? 'show' : 'hide'}`}>
-						<Sidebar label = {"Profile"} val = {true}/>
+						<Sidebar label = {"Home"} val = {false}/>
 					</Col>
 
 					<Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-						<ChatArea messages={messages} />
-						<ChatInput onSend={handleUserMessage} />
-						<footer>&copy; Horizon 2024</footer>
+						<h1>Profile</h1>
 					</Col>
 				</Row>
 			</Container>
@@ -90,4 +76,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default Profile;
