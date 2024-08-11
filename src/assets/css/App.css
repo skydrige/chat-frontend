@@ -181,6 +181,7 @@ body {
 	box-shadow: none;
 	outline: none;
 	border: none;
+	text-decoration: none;
 }
 
 .sidebar-footer Button:hover {
@@ -191,6 +192,14 @@ body {
 	border: none;
 	transform: scale(1.2);
 	transition: transform 0.3s ease-in-out 0s;
+}
+
+.sidebar-footer Button:active:focus {
+	background: #303030;
+	width: 100%;
+	box-shadow: none;
+	outline: none;
+	border: none;
 }
 
 .sidebar-footer Button:focus:active {
@@ -402,6 +411,37 @@ body {
 	background-color: #191919;
 }
 
+.profile-headers {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 6%;
+	position: sticky;
+}
+
+.profile-headers Button {
+	min-width: 100px;
+	width: fit-content;
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.profile-headers Button:hover {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.profile-headers Button:focus:active {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
 @media screen and (width < 768px) {
 	.chat-section {
 		height: 75%;
@@ -427,6 +467,12 @@ body {
 	}
 	.chat-area {
 		min-height: 75%;
+	}
+	.sidebar-header {
+		height: 6%;
+	}
+	.sidebar-content {
+		height: 57%;
 	}
 }
 

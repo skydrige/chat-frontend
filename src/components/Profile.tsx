@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
 import Sidebar from './Sidebar';
@@ -68,7 +68,10 @@ function Profile() {
 					</Col>
 
 					<Col xs={sidebarVisible ? 10 : 12} className="main-content p-2 m-2">
-						<h1>Profile</h1>
+						<div className={"profile-headers"}>
+							<Button>Profile</Button>
+							<Button>Save Changes</Button>
+						</div>
 					</Col>
 				</Row>
 			</Container>
