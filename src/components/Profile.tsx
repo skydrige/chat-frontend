@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
 import Sidebar from './Sidebar';
 import '../assets/css/App.css';
+import Sungjinwoo from "../assets/SungJinwoo.png";
 
 function Profile() {
 	const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
@@ -71,6 +72,17 @@ function Profile() {
 						<div className={"profile-headers"}>
 							<Button>Profile</Button>
 							<Button>Save Changes</Button>
+						</div>
+						<div className={"profile-content"}>
+							<div className={"avatar"}>
+								<p className={"avatar-label"}>Profile Photo</p>
+								<img className={"preview-avatar rounded-circle"} style={{width: "150px", height: "150px"}}
+								     src={Sungjinwoo} alt={"Avatar"}/>
+							</div>
+							<div className={"edit-avatar"}>
+								<Button className={"remove-photo"}>Remove Photo</Button>
+								<Button className={"change-photo"}>Change Photo</Button>
+							</div>
 						</div>
 					</Col>
 				</Row>

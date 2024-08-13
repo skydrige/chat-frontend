@@ -442,6 +442,83 @@ body {
 	border: none;
 }
 
+.profile-content	 {
+	background: none;
+	margin: 1% 7%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3% 0;
+	border-bottom: black 2px solid;
+	height: fit-content;
+}
+
+.avatar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 80px;
+}
+
+.edit-avatar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 42px;
+}
+
+.avatar-label {
+	margin: 0;
+	padding: 6px 12px;
+}
+
+.remove-photo {
+	min-width: 100px;
+	width: fit-content;
+	background: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.remove-photo:hover {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.remove-photo:focus:active {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-photo {
+	min-width: 100px;
+	width: fit-content;
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-photo:hover {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-photo:focus:active {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
 @media screen and (width < 768px) {
 	.chat-section {
 		height: 75%;
@@ -473,6 +550,27 @@ body {
 	}
 	.sidebar-content {
 		height: 57%;
+	}
+	.profile-content{
+		flex-direction: column;
+		margin-top: 3%;
+	}
+	.avatar-label{
+		display: none;
+	}
+	.avatar{
+		gap: 5px;
+		justify-content: space-between;
+		margin-bottom: 8%;
+		flex-direction: column;
+	}
+	.edit-avatar {
+		margin-bottom: 5%;
+		gap: 3px;
+	}
+	.preview-avatar {
+		width: 120px;
+		height: 120px;
 	}
 }
 
