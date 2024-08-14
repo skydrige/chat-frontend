@@ -442,7 +442,7 @@ body {
 	border: none;
 }
 
-.profile-content	 {
+.profile-pic{
 	background: none;
 	margin: 1% 7%;
 	display: flex;
@@ -471,6 +471,7 @@ body {
 .avatar-label {
 	margin: 0;
 	padding: 6px 12px;
+	width: 150px;
 }
 
 .remove-photo {
@@ -519,6 +520,73 @@ body {
 	border: none;
 }
 
+.username {
+	background: none;
+	margin: 1% 7%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3% 0;
+	border-bottom: black 2px solid;
+	height: fit-content;
+	gap: 10px;
+}
+
+.preview-username {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 80px;
+}
+
+.edit-username {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	gap: 42px;
+}
+
+.username-label {
+	margin: 0;
+	padding: 6px 12px;
+	width: 150px;
+}
+
+.username-value {
+	display: block;
+	align-items: center;
+	width: 150px;
+	margin: 0;!important;
+	padding: 10px;
+	background: #1b1a1a;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.change-username {
+	min-width: 100px;
+	width: fit-content;
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-username:hover {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-username:focus:active {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
 @media screen and (width < 768px) {
 	.chat-section {
 		height: 75%;
@@ -551,7 +619,7 @@ body {
 	.sidebar-content {
 		height: 57%;
 	}
-	.profile-content{
+	.profile-pic{
 		flex-direction: column;
 		margin-top: 3%;
 	}
@@ -571,6 +639,19 @@ body {
 	.preview-avatar {
 		width: 120px;
 		height: 120px;
+	}
+	.username{
+		flex-direction: column;
+	}
+	.preview-username {
+		gap: 3px;
+	}
+	.username-value {
+		width: 130px;
+		padding: 6px 12px;
+	}
+	.change-username{
+		margin-top: 3%;
 	}
 }
 

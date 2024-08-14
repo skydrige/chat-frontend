@@ -73,7 +73,7 @@ function Profile() {
 							<Button>Profile</Button>
 							<Button>Save Changes</Button>
 						</div>
-						<div className={"profile-content"}>
+						<div className={"profile-pic"}>
 							<div className={"avatar"}>
 								<p className={"avatar-label"}>Profile Photo</p>
 								<img className={"preview-avatar rounded-circle"} style={{width: "150px", height: "150px"}}
@@ -82,6 +82,15 @@ function Profile() {
 							<div className={"edit-avatar"}>
 								<Button className={"remove-photo"}>Remove Photo</Button>
 								<Button className={"change-photo"}>Change Photo</Button>
+							</div>
+						</div>
+						<div className={"username"}>
+							<div className={"preview-username"}>
+								<p className={"username-label"}>Username</p>
+								<p className={"username-value"}>skydrige</p>
+							</div>
+							<div className={"edit-username"}>
+								<Button className={"change-username"}>Change Username</Button>
 							</div>
 						</div>
 					</Col>
