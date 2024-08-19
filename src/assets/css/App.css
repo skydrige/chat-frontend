@@ -753,6 +753,9 @@ body {
 		width: 130px;
 		padding: 6px 12px;
 	}
+	.remove-photo{
+		background: #1b1a1a;
+	}
 	.change-username{
 		margin-top: 3%;
 	}
