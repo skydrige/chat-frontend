@@ -76,8 +76,7 @@ function Profile() {
 						<div className={"profile-pic"}>
 							<div className={"avatar"}>
 								<p className={"avatar-label"}>Profile Photo</p>
-								<img className={"preview-avatar rounded-circle"} style={{width: "150px", height: "150px"}}
-								     src={Sungjinwoo} alt={"Avatar"}/>
+								<img className={"preview-avatar rounded-circle"} src={Sungjinwoo} alt={"Avatar"}/>
 							</div>
 							<div className={"edit-avatar"}>
 								<Button className={"remove-photo"}>Remove Photo</Button>
@@ -91,6 +90,21 @@ function Profile() {
 							</div>
 							<div className={"edit-username"}>
 								<Button className={"change-username"}>Change Username</Button>
+							</div>
+						</div>
+						<div className={"email-password"}>
+							<div className={"preview-email"}>
+								<p className={"email-label"}>Email</p>
+								<p className={"email-value"}>klokeshklokesh42376@gmail.com</p>
+							</div>
+							<div className={"passwd"}>
+								<div className={"preview-passwd"}>
+									<p className={"passwd-label"}>Password</p>
+									<p className={"passwd-value"}>xxxxxxxxxxx</p>
+								</div>
+								<div className={"edit-passwd"}>
+									<Button className={"change-passwd"}>Change Password</Button>
+								</div>
 							</div>
 						</div>
 					</Col>

@@ -474,6 +474,11 @@ body {
 	width: 150px;
 }
 
+.preview-avatar{
+	width: 150px;
+	height: 150px;
+}
+
 .remove-photo {
 	min-width: 100px;
 	width: fit-content;
@@ -587,6 +592,104 @@ body {
 	border: none;
 }
 
+.email-password {
+	background: none;
+	margin: 1% 7%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3% 0;
+	height: fit-content;
+}
+
+.preview-email {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 80px;
+	margin-bottom: 20px;
+}
+
+.email-label {
+	margin: 0;
+	padding: 6px 12px;
+	width: 150px;
+}
+
+.email-value {
+	display: block;
+	align-items: center;
+	min-width: 150px;
+	width: fit-content;
+	margin: 0;!important;
+	padding: 10px;
+	background: #1b1a1a;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.passwd {
+	background: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.preview-passwd {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 80px;
+}
+
+.passwd-label {
+	margin: 0;
+	padding: 6px 12px;
+	width: 150px;
+}
+
+.passwd-value {
+	display: block;
+	align-items: center;
+	min-width: 150px;
+	width: fit-content;
+	margin: 0;!important;
+	padding: 10px;
+	background: #1b1a1a;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.edit-passwd {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	gap: 42px;
+}
+
+.change-passwd {
+	min-width: 100px;
+	width: fit-content;
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-passwd:hover {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.change-passwd:focus:active {
+	background: #1b1a1a;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
 @media screen and (width < 768px) {
 	.chat-section {
 		height: 75%;
@@ -637,8 +740,8 @@ body {
 		gap: 3px;
 	}
 	.preview-avatar {
-		width: 120px;
-		height: 120px;
+		width: 250px;
+		height: 250px;
 	}
 	.username{
 		flex-direction: column;
@@ -652,6 +755,40 @@ body {
 	}
 	.change-username{
 		margin-top: 3%;
+	}
+	.preview-email {
+		gap: 0;
+		justify-content: space-between;
+	}
+	.email-value{
+		overflow-x: auto;
+	}
+	.passwd {
+		flex-direction: column;
+	}
+	.preview-passwd {
+		gap: 0;
+		justify-content: space-between;
+	}
+	.passwd-value {
+		overflow-x: auto;
+	}
+	.email-value::-webkit-scrollbar, .passwd-value::-webkit-scrollbar {
+		display: none;
+	}
+	.email-value::-webkit-scrollbar-thumb, .passwd-value::-webkit-scrollbar-thumb {
+		display: none;
+	}
+
+	.email-value::-webkit-scrollbar-track, .passwd-value::-webkit-scrollbar-track {
+		display: none;
+	}
+
+	.email-value::-webkit-scrollbar-thumb:hover, .passwd-value::-webkit-scrollbar-thumb:hover {
+		display: none;
+	}
+	.change-passwd{
+		margin-top: 5%;
 	}
 }
 
