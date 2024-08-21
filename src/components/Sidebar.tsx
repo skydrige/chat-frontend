@@ -1,16 +1,17 @@
-// components/Sidebar.tsx
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../assets/css/App.css';
 import { Button } from "react-bootstrap";
+import { useAuth} from "./Auth/AuthContext.tsx";
 
 interface SidebarProps {
 	label: string;
 	val ?: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ label, val}) => {
+const Sidebar: React.FC<SidebarProps> = ({ label, val }) => {
 	const navigate = useNavigate();
+	const { logout } = useAuth();
 
 	const handleNavigation = () => {
 		if (val) {
@@ -20,12 +21,17 @@ const Sidebar: React.FC<SidebarProps> = ({ label, val}) => {
 		}
 	};
 
+	const handleLogout = async () => {
+		logout();
+		navigate("/login-register");
+	}
+
 	return (
 		<div className="sidebar">
 			<div className="sidebar-header">
 				<Button>New Chat</Button>
 			</div>
-			<div className={"sidebar-content"}>
+			<div className="sidebar-content">
 				<Button style={{ marginTop: "8px" }}>Chat - 1</Button>
 				<Button>Chat - 2</Button>
 				<Button>Chat - 3</Button>
@@ -39,9 +45,9 @@ const Sidebar: React.FC<SidebarProps> = ({ label, val}) => {
 				<Button>Chat - 11</Button>
 				<Button>Chat - 12</Button>
 			</div>
-			<div className={"sidebar-footer"}>
+			<div className="sidebar-footer">
 				<Button onClick={handleNavigation}>{label}</Button>
-				<Button>Logout</Button>
+				<Button onClick={handleLogout}>Logout</Button>
 			</div>
 		</div>
 	);
