@@ -371,12 +371,12 @@ body {
 
 .chat-box {
 	position: absolute;
-	top: 10px; /* Adjust margin as needed */
-	bottom: 10px; /* Adjust margin as needed */
-	left: 10px; /* Adjust margin as needed */
-	right: 10px; /* Adjust margin as needed */
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
 	overflow-y: auto;
-	padding: 10px; /* Optional padding inside the chat-box */
+	padding: 10px;
 	box-sizing: border-box;
 }
 
