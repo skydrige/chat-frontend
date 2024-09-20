@@ -10,6 +10,7 @@ import '../assets/css/App.css';
 interface Message {
 	sender: 'user' | 'system';
 	text: string;
+	hasWrapsOrIndents: boolean;
 }
 
 function Home() {
@@ -66,7 +67,8 @@ function Home() {
 	}, [sidebarVisible]);
 
 	const handleUserMessage = (text: string) => {
-		setMessages([...messages, { sender: 'user', text }, { sender: 'system', text: 'Error 404: Server Down' }]);
+		const hasWrapsOrIndents = /[\n\t]/.test(text);
+		setMessages([...messages, { sender: 'user', text, hasWrapsOrIndents }, { sender: 'system', text: 'Error 404: Server Down', hasWrapsOrIndents: false }]);
 	};
 
 	return (
