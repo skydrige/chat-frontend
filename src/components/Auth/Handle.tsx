@@ -1,5 +1,5 @@
 export async function HandleLogin(username: string, password: string): Promise<boolean> {
-	if (username === 'admin' && password === 'admin') {
+	if (username === 'admin@gmail.com' && password === 'reboot') {
 		console.log('Login successful');
 		return true;
 	}
