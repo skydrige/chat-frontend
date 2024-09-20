@@ -211,6 +211,7 @@ body {
 }
 
 .main-content {
+	position: relative;
 	transition: margin-left 0.3s;
 	flex: 1;
 }
@@ -360,11 +361,12 @@ body {
 	justify-content: space-between;
 	background-color: #1c1c1c;
 	min-width: 65%;
-	width: 100%;
+	width: 65%;
 	border-radius: 30px;
 	min-height: 87%;
 	position: relative;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 .chat-box {

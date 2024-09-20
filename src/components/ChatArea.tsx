@@ -3,7 +3,7 @@ import ChatCard from './ChatCard';
 import '../assets/css/App.css';
 
 interface ChatAreaProps {
-	messages: { sender: 'user' | 'system'; text: string }[];
+	messages: { sender: 'user' | 'system'; text: string; hasWrapsOrIndents: boolean }[];
 }
 
 const ChatArea: React.FC<ChatAreaProps> = ({ messages }) => {
@@ -19,7 +19,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({ messages }) => {
 		<div className="chat-area">
 			<div className="chat-box" ref={chatBoxRef}>
 				{messages.map((message, index) => (
-					<ChatCard key={index} sender={message.sender} text={message.text} />
+					<ChatCard key={index} sender={message.sender} text={message.text} hasWrapsOrIndents={message.hasWrapsOrIndents} />
 				))}
 			</div>
 		</div>
